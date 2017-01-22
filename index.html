@@ -13,9 +13,8 @@
   <script src="js/index.js"></script>
 
 </head>
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
-
-<nav class="navbar navbar-default navbar-fixed-top">
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="-50">
+<nav class="navbar hidden navbar-default navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -23,7 +22,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#myPage">Logo</a>
+      <a class="navbar-brand" href="#myPage">RNSIT</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
@@ -46,7 +45,14 @@
     </div>
   </div>
 </nav>
-
+<div class="maincont">
+    <span>  
+        <img class="logo" src="img\logo.jpg">
+    </span>
+    <span class=""><h1>RNSIT</h1>
+    </span>
+    <div class="text-center">AICTE Approved,NBA Accredited and VTU Affiliated</div>
+</div>
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -95,17 +101,15 @@
 </div>
 
 <!-- Container RNSIT BODY SECTION -->
-<div id="about" class="container text-center">
+<div id="about" class="container-fluid text-center">
   <h3>RNS INSTITUTE OF TECHNOLOGY</h3>
   <p><em>(AICTE Approved,NBA Accredited and VTU Affiliated)</em></p>
-  <p>R.N. Shetty Institute of Technology (RNSIT) established in the year 2001, is the brain-child of the Group Chairman, Dr. R.N. Shetty.The Murudeshwar Group of Companies headed by Sri. R. N. Shetty is a leading player in many industries viz construction, manufacturing, hotel, automobile, power & IT services and education. The group has contributed significantly to the field of education. A number of educational institutions are run by the R.N.Shetty Trust, with RNSIT one amongst them. With a continuous desire to provide quality education to the society, the group has established RNSIT, an institution to nourish and produce the best of engineering talents in the country. RNSIT is one of the best accredited engineering colleges in bengaluru and top accredited engineering colleges in bengaluru.   </p>
+  <p class="text-justify">R.N. Shetty Institute of Technology (RNSIT) established in the year 2001, is the brain-child of the Group Chairman, Dr. R.N. Shetty.The Murudeshwar Group of Companies headed by Sri. R. N. Shetty is a leading player in many industries viz construction, manufacturing, hotel, automobile, power & IT services and education. The group has contributed significantly to the field of education. A number of educational institutions are run by the R.N.Shetty Trust, with RNSIT one amongst them. With a continuous desire to provide quality education to the society, the group has established RNSIT, an institution to nourish and produce the best of engineering talents in the country. RNSIT is one of the best accredited engineering colleges in bengaluru and top accredited engineering colleges in bengaluru.   </p>
   <br>
   <div class="row">
     <div class="col-sm-4">
       <p class="text-center"><strong>Dr. R.N. Shetty.</strong></p><br>
-      <a href="#demo" data-toggle="collapse">
-        <img src="img/chair.jpg" class="img-circle person" alt="chairman" width="255" height="255">
-      </a>
+        <img src="img\chair.jpg" class="img-circle" alt="chairman" width="255" height="255">
       <p class="text-center"><strong>Chairman</strong></p>
       <div id="demo" class="collapse"> <!--image click description!-->
         <p></p>
@@ -115,9 +119,7 @@
     </div>
     <div class="col-sm-4">
       <p class="text-center"><strong>Dr. M K Venkatesha</strong></p><br>
-      <a href="#demo2" data-toggle="collapse">
-        <img src="img/prin.jpg" class="img-circle person" alt="principal" width="255" height="255">
-      </a>
+        <img src="img\prin.jpg" class="img-circle" alt="Principal" width="255" height="255">
       <p class="text-center"><strong>Principal</strong></p>
       <div id="demo2" class="collapse"><!--image click description!-->
         <p></p>
@@ -127,9 +129,7 @@
     </div>
     <div class="col-sm-4">
       <p class="text-center"><strong>Dr. H N Shivashankar</strong></p><br>
-      <a href="#demo3" data-toggle="collapse">
-        <img src="img/director.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
-      </a>
+        <img src="img\director.jpg" class="img-circle" alt="Director" width="255" height="255">
       <p class="text-center"><strong>Director</strong></p><br>
       <div id="demo3" class="collapse"><!--image click description!-->
         <p></p>
@@ -139,10 +139,6 @@
     </div>
   </div>
 </div>
-
-
-
-
 
 <!-- Container (Contact Section) -->
 <div id="contact" class="container">
@@ -174,25 +170,12 @@
     </div>
   </div>
   <br>
+</div>
+<div id="googleMap">
+  <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.openstreetmap.org/export/embed.html?bbox=77.51644670963289%2C12.900480199066351%2C77.52055585384369%2C12.903397973248826&amp;layer=mapnik&amp;marker=12.901939090412121%2C77.51850128173828" style="border: 1px solid black"></iframe><br/><small><a href="http://www.openstreetmap.org/?mlat=12.90194&amp;mlon=77.51850#map=18/12.90194/77.51850">View Larger Map</a></small>
+</div>
 
-<div id="googleMap"></div>
 
-<!-- Add Google Maps -->
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzTebAqguwIsIkV9sv9IyEkhbRa8wsK68&callback=initMap">
-</script>
-<script>
-function initMap() {
-  var uluru = {lat: 12.919027, lng: 77.5163476};
-  var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 4,
-    center: uluru
-  });
-  var marker = new google.maps.Marker({
-    position: uluru,
-    map: map
-  });
-}
-</script>
 
 <!-- Footer -->
 <footer class="text-center">
@@ -201,37 +184,13 @@ function initMap() {
   </a><br><br>
   <p>Department of CSE RNSIT</footer>
 
-  <!-- to be copied to js page!-->
-
+<!-- Add Google Maps -->
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzTebAqguwIsIkV9sv9IyEkhbRa8wsK68&callback=initMap">
+</script>
+<script src = "js\index.js">
+</script>
 <script>
-$(document).ready(function(){
-  // Initialize Tooltip
-  $('[data-toggle="tooltip"]').tooltip();
 
-  // Add smooth scrolling to all links in navbar + footer link
-  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
-
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-
-      // Prevent default anchor click behavior
-      event.preventDefault();
-
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 900, function(){
-
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
-})
 </script>
 
 </body>
